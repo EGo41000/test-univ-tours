@@ -9,3 +9,10 @@ Ce que le projet va permettre :
 
 
 ![Robot](robot.png)
+
+```mermaid
+flowchart TD
+    mosquitto[serveur<br>Mosquitto] -->|messages| RPi[Raspberry Pi<br>Node-RED<br>Documentation]
+    RPi --> BDD
+    RPi <--> GitHub
+```
