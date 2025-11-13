@@ -8,3 +8,4 @@ Ce que le projet va permettre :
 - utiliser Node-RED
 
 
+![Robot](robot.png)
