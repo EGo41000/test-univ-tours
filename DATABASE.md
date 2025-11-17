@@ -1,3 +1,24 @@
+# BDD capteurs
+
+Import des CSV Capteurs.csv et Mesures_Temperature_Vbatt_sinus.csv
+```sql
+CREATE TABLE Capteurs (
+	id_capteur INTEGER,
+	emplacement VARCHAR(20),
+	"type" VARCHAR(20),
+	date_installation NVARCHAR(10)
+);
+
+CREATE TABLE Mesures (
+	id_mesure INTEGER,
+	id_capteur INTEGER,
+	temperature REAL,
+	vbatt REAL,
+	date_heure NVARCHAR(10)
+);
+```
+
+
 # Gestion BDD
 
 ## Création table
@@ -57,4 +78,18 @@ WHERE id=20
 DELETE
 FROM Etudiants
 WHERE naissance IS NOT NULL;
+```
+
+# EXO Livre Auteurs
+```sql
+-- Ajout de 2 livres de V.Hugo
+INSERT INTO Livres(id_livre,titre,annee_publication,id_auteur,genre,nombre_pages,disponible)
+VALUES (10, 'Notre-Dame de Paris', 1831, 1, 'Roman historique', 0, 1)
+,(11, 'Quatrevingt-treize', 1874, 1, 'Roman historique', 0, 1);
+     
+    Le Dernier Jour d'un condamné (1829)
+    Notre-Dame de Paris (1831)
+    Les Misérables (1862)
+    Les Travailleurs de la mer (1866)
+    Quatrevingt-treize (1874)
 ```
